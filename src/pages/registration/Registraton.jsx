@@ -2,7 +2,10 @@ import React from 'react'
 
 function Registraton() {
   return (
-    <div>Registraton</div>
+    <>
+      <div>Registraton</div>
+      <h1>hallow</h1>
+    </>
   )
 }
 
