@@ -1,0 +1,103 @@
+.loginbox{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loginbox_inner{
+    width: 378px;
+}
+.login_img{
+    width: 100%;
+    height: 100vh;
+}
+.auth_heading{
+    color: #03014C;
+    font-size: 33px;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+}
+.provider_login{
+    border: 1px solid #03014C;
+    border-radius: 8px;
+    padding: 20px 30px;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 30px;
+}
+.provider_login span{
+    color: #03014C;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+}
+.loginbox .form_main{
+    margin-top: 30px;
+} 
+.form_main{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.login_input_field{
+    width: 100%;
+}
+.loginbtn{
+    background-color: #5F34F5 !important;
+    padding: 20px 0 !important ;
+    font-family: "Open Sans", sans-serif !important;
+    border-radius: 10px !important;
+}
+.loginauth{
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    color: #03014C;
+    padding-top: 20px;
+    text-align: center;
+}
+.loginauth a , .loginauth span{
+    color: #EA6C00;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding-left: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* .login_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.login_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+.input_pass{
+    position: relative;
+}
+.input_pass i{
+    position: absolute;
+    font-size: 20px;
+    top: 20px;
+    right: 5px;
+}
+.forgot_box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.forgot_box h2{
+    margin-bottom: 0px;
+    text-transform: capitalize;
+}
+.modal_close{
+    font-size: 26px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
