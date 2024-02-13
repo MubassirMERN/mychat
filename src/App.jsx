@@ -4,10 +4,8 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-// import Login from "./pages/registration/login/Login";
-// import Registraton from "./pages/registration/Registraton";
 import Login from "./pages/login/Login";
-import Registraton from "./pages/registration/Registraton";
+import Registration from "./pages/registration/Registration";
 import Home from "./pages/home/Home";
 import RootLayout from "./components/layout/RootLayout";
 
@@ -19,7 +17,7 @@ function App() {
     createRoutesFromElements(
       <>
         <Route path="/" element={<Login/>}/>
-        <Route path="/registration" element={<Registraton/>}/>
+        <Route path="/registration" element={<Registration/>}/>
         <Route element={<RootLayout/>}>
           <Route path="/home" element={<Home/>}/>
         </Route>

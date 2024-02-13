@@ -48,6 +48,7 @@ const ValidationTextField = styled(TextField)({
 
 
 function Login() {
+  let emailregex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   let [passShow,setpassShow] = useState(false)
 
   let handlePassShow = () => {
@@ -65,6 +66,23 @@ function Login() {
   let handleModalClose =() => {
     setOpen(false)
   }
+  
+  let [formData, setFormData] = useState("")
+  let [error, setError] = useState("")
+  let handleForgot = (e) =>{
+    setFormData(e.target.value)
+  }
+  let handleForgotSubmit = () =>{
+    if(!formData){
+      console.log("email dao");
+    }else if(!formData.match(emailregex)){
+      console.log("email formet thik dao");
+    }else{
+      console.log(formData);
+    }
+  }
+  
+
   return (
     <>
         <Modal
@@ -77,8 +95,8 @@ function Login() {
             <i className='modal_close' onClick={handleModalClose}><IoMdClose /></i>
             <div className='forgot_box'>
               <h2>forgot password</h2>
-              <Input type="email" labeltext="Email Address" />
-              <CostomButton text="Send Link" variant="contained"/>
+              <Input onChange={handleForgot} type="email" labeltext="Email Address" />
+              <CostomButton onClick={handleForgotSubmit} text="Send Link" variant="contained"/>
             </div>
           </Box>
       </Modal>

@@ -13,7 +13,7 @@ function RootLayout() {
                 </div>
             </Grid>
             <Grid item xs={10}>
-                <Outlet/>
+                <Outlet/>              
             </Grid>
         </Grid>
     </Box>
