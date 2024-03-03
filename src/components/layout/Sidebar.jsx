@@ -4,6 +4,7 @@ import { IoHomeOutline } from "react-icons/io5";
 import { AiOutlineMessage } from "react-icons/ai";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
+import Image from '../../utilities/image';
 
 
 
@@ -13,8 +14,9 @@ function Sidebar() {
         <div className='sidebarBox'>
             <div>
                 <div className='img_box'>
-
+                    <Image source="" alt="img"/>
                 </div>
+                <h3 className='username'>Mubassir</h3>
             </div>
             <div>
                 <ul className='navigation'>
