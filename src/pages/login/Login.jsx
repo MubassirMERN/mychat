@@ -17,6 +17,7 @@ import { FaEyeSlash } from "react-icons/fa";
 import { Alert, Modal } from '@mui/material';
 import { IoMdClose } from "react-icons/io";
 // import { Alert, Modal } from '@mui/material';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";  
 
 
 const style = {
@@ -34,9 +35,9 @@ const style = {
 
 
 function Login() {
-
+  
+    const auth = getAuth();
     // const navigate = useNavigate();
-  //   const auth = getAuth();
   // const dispatch = useDispatch()
 
 
