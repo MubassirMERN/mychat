@@ -18,6 +18,7 @@ import { Alert, Modal } from '@mui/material';
 import { IoMdClose } from "react-icons/io";
 // import { Alert, Modal } from '@mui/material';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";  
+import { useNavigate } from "react-router-dom";
 
 
 const style = {
@@ -36,8 +37,8 @@ const style = {
 
 function Login() {
   
+    const navigate = useNavigate();
     const auth = getAuth();
-    // const navigate = useNavigate();
   // const dispatch = useDispatch()
 
 
@@ -96,20 +97,24 @@ function Login() {
         if(userCredential.user.emailVerified){
           localStorage.setItem("user",JSON.stringify(userCredential.user))
             dispatch(loginuser(userCredential.user))
-            Navigate("/home")
-        }else{ singOut(auth).than(()=>{
-          TransformStream.error('please Verify Your Email',{
-            position:"top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
-        })
+            navigate("/home")
         }
+        else{
+          console.log("please Verify Your Email");
+        }
+        // else{ singOut(auth).than(()=>{
+        //   TransformStream.error('please Verify Your Email',{
+        //     position:"top-right",
+        //     autoClose: 3000,
+        //     hideProgressBar: false,
+        //     closeOnClick: true,
+        //     pauseOnHover: true,
+        //     draggable: true,
+        //     progress: undefined,
+        //     theme: "dark",
+        //   });
+        // })
+        // }
       }).catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
